@@ -1,7 +1,7 @@
 {
     "name": "porcentaje-internet-personas",
     "version": "1.0.0",
-    "description": "La aplicación permite mostrar el número de personas que usan internet de un país y año determinados, además estos resultados se pueden guardar en un fichero .txt ",
+    "description": "La aplicación permite mostrar el porcentaje de personas que usan internet de un país y año determinados, además estos resultados se pueden guardar en un fichero .txt ",
     "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
