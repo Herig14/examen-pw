@@ -30,7 +30,7 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-### Instalación de nuestra APP 🔧
+### Instalación de la APP 🔧
 
 _Para la ejecucion de la app desarrollada en node.js simplemente instala_
 
