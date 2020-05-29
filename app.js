@@ -3,7 +3,7 @@
 const argv = require('./config/yargs').argv;
 const { buscarPais } = require('./buscador/buscar')
 const { guardartxt } = require('./controlador-guardar/guardar')
-const colors = require('./Config/colors').colors;
+const colors = require('./config/colors').colors;
 let comando = argv._[0]
 let path = argv.archivo
 let pais = argv.pais
