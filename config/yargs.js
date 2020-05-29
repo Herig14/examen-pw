@@ -19,7 +19,7 @@ const parametros = {
 }
 
 
-const argv = require('yargs').command('mostrar', ' Este comando imprime en pantalla el resultado de la búsqueda', parametros).command('guardar', ' Este comando almacenará los resultados de las estadísticas en un archivo txt, en el directorio resultados.', parametros).argv;
+const argv = require('yargs').command('mostrar', ' Este comando imprime en pantalla el resultado de la búsqueda', parametros).command('guardar', ' Este comando almacenará los resultados de las estadísticas en un archivo txt, en el directorio resultados.', parametros).help(alias = "h").argv;
 
 module.exports = {
     argv
