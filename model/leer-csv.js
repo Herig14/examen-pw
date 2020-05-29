@@ -7,9 +7,10 @@ let readCSV = async(path) => {
     try {
         csvStr = fs.readFileSync(path, "utf-8");
     } catch (error) {
+        console.log(path);
         throw new Error(`El archivo csv no existe`)
     }
-    if (csvStr.indexOf("IT.CEL.SETS") > 0 && csvStr.indexOf("Country") > 0 && csvStr.indexOf("IT.CEL.SETS") && csvStr.indexOf("Country") == 94) {
+    if (csvStr.indexOf("IT.NET.USER.ZS") > 0 && csvStr.indexOf("Country") > 0 && csvStr.indexOf("IT.NET.USER.ZS") && csvStr.indexOf("Country") == 94) {
         csvStr = csvStr.substring(csvStr.indexOf("Country") - 1);
         return csv().fromString(csvStr).then((jsonObj) => jsonObj)
     } else {
@@ -20,6 +21,8 @@ let getJSON = async(path) => {
     let data = await readCSV(path);
     return data;
 }
+
+
 module.exports = {
     getJSON
 }

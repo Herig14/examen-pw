@@ -1,23 +1,24 @@
 {
-  "name": "suscripciones-moviles",
-  "version": "1.0.0",
-  "description": "La aplicación permite mostrar el valor de las suscripciones a telefonía celular de un país y año determinados, además estos resultados se pueden guardar en un fichero .txt ",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Herig14/examen-pw.git"
-  },
-  "author": "Herig Recalde",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Herig14/examen-pw/issues"
-  },
-  "homepage": "https://github.com/Herig14/examen-pw#readme",
-  "dependencies": {
-    "csvtojson": "^2.0.10",
-    "yargs": "^15.3.1"
-  }
+    "name": "suscripciones-moviles",
+    "version": "1.0.0",
+    "description": "La aplicación permite mostrar el número de personas que usan internet de un país y año determinados, además estos resultados se pueden guardar en un fichero .txt ",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Herig14/examen-pw.git"
+    },
+    "author": "Herig Recalde",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Herig14/examen-pw/issues"
+    },
+    "homepage": "https://github.com/Herig14/examen-pw#readme",
+    "dependencies": {
+        "country-data": "0.0.31",
+        "csvtojson": "^2.0.10",
+        "yargs": "^15.3.1"
+    }
 }
