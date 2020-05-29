@@ -16,7 +16,16 @@ const verificarIso = async pais => {
 }
 async function buscarPais(pais, year, csvpath) {
     pais = await verificarIso(pais)
-    let jsonOB = await getJSON(csvpath).then().catch(err => console.log(err));
+    msg = ""
+
+    let jsonOB = await getJSON(csvpath).then().catch(err => msg = err);
+    if (msg != "") {
+        throw new Error(msg)
+    }
+    if (year < 1960) {
+        let err = `No existen registros en el csv para el año ${year}`
+        throw new Error(err)
+    }
     let aux
     for (var item in jsonOB) {
         temp = jsonOB[item]['Country Code']

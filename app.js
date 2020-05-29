@@ -2,6 +2,7 @@
 
 const argv = require('./config/yargs').argv;
 const { buscarPais } = require('./buscador/buscar')
+const { guardartxt } = require('./controlador-guardar/guardar')
 const colors = require('./Config/colors').colors;
 let comando = argv._[0]
 let path = argv.archivo
@@ -20,7 +21,9 @@ buscarPais(pais, year, path).then(result => {
             console.log(colors.datos("Valor:"), colors.valorinf(result.porcentaje));
             break;
         case 'guardar':
-            console.log('guardar');
+            let name = result.code + "-" + result.anio
+            let msg = guardartxt(result, name)
+            console.log(colors.notificacion(msg));
 
             break;
 
@@ -28,7 +31,5 @@ buscarPais(pais, year, path).then(result => {
             console.log("Comando no reconocido");
     }
 }).catch(error => {
-    console.log(error.message);
+    console.log(colors.error(error.message));
 })
-
-//console.log(path, pais, year);

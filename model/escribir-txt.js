@@ -7,14 +7,17 @@ function writetxt(content, name) {
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir);
     }
-    fs.writeFile(ruta, content, (err) => {
+    if (fs.existsSync(ruta)) {
+        return `El fichero con la consulta ya existe: resultados/${name}.txt`
+    }
+    fs.writeFile(ruta, content, { encoding: 'utf8' }, (err) => {
         if (err) {
             console.log(err);
         };
     });
     let msg = `Archivo guardado exitósamente: resultados/${name}.txt`
         //var fullpath = __dirname + `\\vista\\archivosjson\\${name}.json`
-    return { mensaje: msg };
+    return msg;
 }
 module.exports = {
     writetxt
