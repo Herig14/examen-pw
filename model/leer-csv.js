@@ -7,7 +7,6 @@ let readCSV = async(path) => {
     try {
         csvStr = fs.readFileSync(path, "utf-8");
     } catch (error) {
-        console.log(path);
         throw new Error(`El archivo csv no existe`)
     }
     if (csvStr.indexOf("IT.NET.USER.ZS") > 0 && csvStr.indexOf("Country") > 0 && csvStr.indexOf("IT.NET.USER.ZS") && csvStr.indexOf("Country") == 94) {

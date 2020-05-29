@@ -25,7 +25,6 @@ async function buscarPais(pais, year, csvpath) {
             break;
         }
     }
-    console.log(aux[year]);
     let subs = aux[year]
     if (isNaN(subs) || subs == '') {
         subs = "No existen suscripciones"
