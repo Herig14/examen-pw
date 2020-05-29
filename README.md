@@ -42,7 +42,7 @@ npm i porcentaje-internet-personas -g
 * _**-y** o **--archivo** Año (Desde 1960 - Hasta 2019)._
 * _**-f** o **--anio** Path(Ruta) de los datos del Banco Mundial._
 ```
-internet-porcentaje --help
+internet-porcentaje -help
 internet-porcentaje mostrar -c <pais> -y <año> -f <archivo>
 internet-porcentaje guardar -c <pais> -y <año> -f <archivo>
 ```
